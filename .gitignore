@@ -36,6 +36,8 @@ migrate_working_dir/
 lib/generated_plugin_registrant.dart
 lib/firebase_options.dart
 
+firebase_options.dart
+
 # Symbolication related
 app.*.symbols
 
@@ -46,3 +48,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+/android/app/google-services.json
+
+google-services.json
+
+
+/ios/firebase_app_id_file.json
+firebase_app_id_file.json
+
