@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_clone/pages/select_person_to_chat_page.dart';
 import 'package:whatsapp_clone/providers.dart';
-import 'package:whatsapp_clone/screens/list_chat_screen.dart';
 
 class Home extends ConsumerStatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -75,11 +73,11 @@ class _HomeState extends ConsumerState<Home>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const <Widget>[
-          OtherTab(tabName: "Camera"),
-          ListChatScreen(),
-          OtherTab(tabName: "Status"),
-          OtherTab(tabName: "Calls"),
+        children: <Widget>[
+          const OtherTab(tabName: "Camera"),
+          Container(), // Todo, change to list of chats
+          const OtherTab(tabName: "Status"),
+          const OtherTab(tabName: "Calls"),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -89,9 +87,11 @@ class _HomeState extends ConsumerState<Home>
           color: Colors.white,
         ),
         onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => const SelectPersonToChat()),
-        ),
+            context,
+            MaterialPageRoute(
+                builder: (_) =>
+                    Scaffold()) // change to actual select person page)),
+            ),
       ),
     );
   }
