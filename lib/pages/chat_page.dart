@@ -84,7 +84,7 @@ class _ChatPageState extends ConsumerState<ChatPage>
                             },
                           );
                         }
-                        return const CircularProgressIndicator();
+                        return Container(); // Loading Widget
                       })),
               _sendMessageTextField(),
             ]),
